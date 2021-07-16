@@ -9,6 +9,6 @@
 				<fixed-frequency frequency="3000"/>
 			</scheduling-strategy>
 		</scheduler>
-		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub again"/>
 	</flow>
 </mule>
