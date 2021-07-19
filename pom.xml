@@ -76,8 +76,8 @@
             <version>1.2.0</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-		<dependency>
-            <groupId>com.mycompany</groupId>
+    	<dependency>
+            <groupId>432f5ed9-6c10-4648-baa3-95ef489ea4e0</groupId>
             <artifactId>tripointe-domain-project</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <classifier>mule-domain</classifier>
