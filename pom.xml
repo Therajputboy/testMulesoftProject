@@ -28,9 +28,9 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensio<!-- ns>
+				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
+					<!--<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
 						<muleVersion>${mule.version}</muleVersion>
 						<username>${anypoint.username}</username>
