@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -29,7 +28,7 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
+				<extensions>true</extensio<!-- ns>
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
@@ -42,9 +41,22 @@
 						<workerType>${vCore}</workerType>
 						<workers>${workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
-						<!-- <region> ${region} </region> -->
+						<region> ${region} </region>
 					</cloudHubDeployment>
-					<classifier>mule-application</classifier>
+		 -->			
+			 <armDeployment>
+			      <muleVersion>${mule.version}</muleVersion>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <target>${target}</target>
+			      <targetType>${target.type}</targetType>
+			      <username>${anypoint.username}</username>
+			      <password>${anypoint.password}</password>
+			      <environment>${env}</environment>
+			      <applicationName>${appname}</applicationName>
+			      <workerType>${vCore}</workerType>
+				  <workers>${workers}</workers>
+	    	</armDeployment>
+		 <classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
 			
@@ -64,7 +76,14 @@
             <version>1.2.0</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-	</dependencies>
+		<dependency>
+            <groupId>com.mycompany</groupId>
+            <artifactId>tripointe-domain-project</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <classifier>mule-domain</classifier>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<repositories>
           <repository>
