@@ -42,8 +42,8 @@
 						<workers>${workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
 						<region> ${region} </region>
-					</cloudHubDeployment>
-		 -->			
+					</cloudHubDeployment>-->
+		 			
 			 <armDeployment>
 			      <muleVersion>${mule.version}</muleVersion>
 			      <uri>https://anypoint.mulesoft.com</uri>
@@ -53,8 +53,6 @@
 			      <password>${anypoint.password}</password>
 			      <environment>${env}</environment>
 			      <applicationName>${appname}</applicationName>
-			      <workerType>${vCore}</workerType>
-				  <workers>${workers}</workers>
 	    	</armDeployment>
 		 <classifier>mule-application</classifier>
 				</configuration>
