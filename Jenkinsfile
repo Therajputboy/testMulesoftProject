@@ -17,7 +17,10 @@ bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.u
 
 stage('Mail Notification') {
 steps {
-mail bcc: '', body: 'Build Successful', cc: '', from: '', replyTo: '', subject: 'Build Successful', to: 'rohit.singh@apisero.com'
+mail bcc: '', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+Check console output at $BUILD_URL to view the results.
+''', cc: '', from: '', replyTo: '', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'rohit.singh@apisero.com'
 }
 }
 }
