@@ -15,7 +15,7 @@ bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.u
 }
 }
 
-stage('Deploy OnPremise') {
+stage('Mail Notification') {
 steps {
 mail bcc: '', body: 'Build Successful', cc: '', from: '', replyTo: '', subject: 'Build Successful', to: 'rohit.singh@apisero.com'
 }
