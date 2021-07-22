@@ -23,19 +23,15 @@ bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.u
 }
 }
 post {
-        always {
-            script {
-                BUILD_USER = getBuildUser()
-            }
-						emailext attachLog: true, 
-			            mimeType: 'text/html',
-						body:							"""<p>EXECUTED: Job <b>\'${env.JOB_NAME}:${env.BUILD_NUMBER})\'</b></p><p>View console output at "<a href="${env.BUILD_URL}"> 							${env.JOB_NAME}:${env.BUILD_NUMBER}</a>"</p> 	<p><i>(Build log is attached.)</i></p>""", 
-						compressLog: true,
-						recipientProviders: [[$class: 'DevelopersRecipientProvider'], 
-						[$class: 'RequesterRecipientProvider']],
-						replyTo: 'do-not-reply@company.com', 
-						subject: "Status: ${currentBuild.result?:'SUCCESS'} - Job \'${env.JOB_NAME}:${env.BUILD_NUMBER}\'", 
-							to: 'rohit.singh@apisero.com'
-			}
-	   }
+    failure {
+        mail to: 'rohit.singh@apisero.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+     success {
+        mail to: 'rohit.singh@apisero.com',
+             subject: "Successful Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+}
 }
