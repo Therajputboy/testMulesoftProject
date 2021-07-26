@@ -4,6 +4,9 @@ agent any
 stages {
 stage('Build Application') {
 steps {
+    if (env.BRANCH_NAME=='main') {
+        echo 'main branch'
+    }
 bat 'mvn clean install'
 }
 }
