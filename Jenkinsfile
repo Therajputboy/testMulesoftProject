@@ -9,7 +9,7 @@ steps {
                     if (env.BRANCH_NAME == 'main') {
                         echo 'I only execute on the master branch'
                     } else {
-                        echo readFile('GIT_BRANCH').trim()
+                        echo ${env.BRANCH_NAME}
                     }
                 }
 bat 'mvn clean install'
