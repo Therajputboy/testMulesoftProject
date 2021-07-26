@@ -5,9 +5,13 @@ stages {
 stage('Build Application') {
     
 steps {
-      if(env.BRANCH_NAME=='main') {
-        echo 'main branch'
-    }
+     script {
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'I only execute on the master branch'
+                    } else {
+                        echo 'I execute elsewhere'
+                    }
+                }
 bat 'mvn clean install'
 }
 }
