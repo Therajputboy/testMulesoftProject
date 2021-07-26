@@ -3,10 +3,11 @@ pipeline {
 agent any
 stages {
 stage('Build Application') {
-     if (env.BRANCH_NAME=='main') {
+    
+steps {
+      if(env.BRANCH_NAME=='main') {
         echo 'main branch'
     }
-steps {
 bat 'mvn clean install'
 }
 }
