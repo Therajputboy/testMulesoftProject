@@ -21,6 +21,8 @@ script{
   	def env = "Development"
   	def target = "TPH-MULE-DEV"
   	def targetType = "server"
+    
+    println(env)
   }
   else if(env.GIT_BRANCH == "QA")
   {
