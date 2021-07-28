@@ -18,25 +18,22 @@ steps {
 script{
   if(env.GIT_BRANCH == "origin/main")
   {
-  	def env = "Development"
-  	def target = "TPH-MULE-DEV"
-  	def targetType = "server"
     
-    echo 'Deploying mule project due to the latest code commit…'
-    echo 'Deploying to the configured environment….'
+    echo 'Deploying mule project due to the latest code commit in Dev branch…'
+    echo 'Deploying to the Development environment….'
     bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
   }
   else if(env.GIT_BRANCH == "QA")
   {
-  	def env = "qa"
-  	def target = "TPH-MULE-UAT"
-  	def targetType = "server"
+   echo 'Deploying mule project due to the latest code commit in QA branch…'
+    echo 'Deploying to the QA environment….'
+    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=QA -Dappname=cicd-test-app1'
   }
    else if(env.GIT_BRANCH == "Prod")
   {
-  	def env = "Production"
-  	def target = "TPH-MULE-PROD"
-  	def targetType = "server"
+  	echo 'Deploying mule project due to the latest code commit in Prod branch…'
+    echo 'Deploying to the Production environment….'
+    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Production -Dappname=cicd-test-app1'
   }
   else
   {
