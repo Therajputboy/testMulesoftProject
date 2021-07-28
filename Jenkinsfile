@@ -5,7 +5,15 @@ stages {
 stage('Build Application') {
     
 steps {
-    echo "${env.GIT_BRANCH}"
+    script{
+        if(${env.GIT_BRANCH == "origin/main")
+             {
+                 echo "Main branch"
+             }
+             else{
+                 echo "${env.GIT_BRANCH}"
+             }
+    }
 bat 'mvn clean install'
     
 }
