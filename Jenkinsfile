@@ -23,6 +23,7 @@ script{
   	def targetType = "server"
     
     println(env)
+    println(target)
   }
   else if(env.GIT_BRANCH == "QA")
   {
