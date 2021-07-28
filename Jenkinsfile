@@ -13,7 +13,7 @@ steps {
       }
     }
     
-stage('Deploy OnPremise Development') {
+stage('Deploy OnPremise') {
 steps {
 script{
   if(env.GIT_BRANCH == "origin/main")
