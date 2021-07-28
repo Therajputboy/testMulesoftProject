@@ -16,7 +16,7 @@ steps {
 stage('Deploy OnPremise Development') {
 steps {
 script{
-  if(env.GIT_BRANCH == "Dev")
+  if(env.GIT_BRANCH == "origin/main")
   {
   	def env = "Development"
   	def target = "TPH-MULE-DEV"
