@@ -6,7 +6,7 @@ stage('Build Application') {
     
 steps {
     script{
-        if(${env.GIT_BRANCH} == "origin/main")
+        if(env.GIT_BRANCH == "origin/main")
              {
                  echo "Main branch"
              }
