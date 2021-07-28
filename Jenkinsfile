@@ -5,7 +5,9 @@ stages {
 stage('Build Application') {
     
 steps {
+    echo "${env.GIT_BRANCH}"
 bat 'mvn clean install'
+    
 }
 }
 
