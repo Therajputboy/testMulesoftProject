@@ -41,7 +41,7 @@ script{
 }
 echo 'Deploying mule project due to the latest code commit…'
 echo 'Deploying to the configured environment….'
-bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=target -Dtarget.type=targetType -Denv=env -Dappname=cicd-test-app1'
+bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=target -Dtarget.type=server -Denv=env -Dappname=cicd-test-app1'
 }
 }
 }
