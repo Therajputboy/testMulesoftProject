@@ -29,7 +29,7 @@ script{
     echo 'Deploying to the QA environment….'
     bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
   }
-   else if(env.GIT_BRANCH == "origin/main")
+   else if(env.GIT_BRANCH == "main")
   {
   	echo 'Deploying mule project due to the latest code commit in Prod branch…'
     echo 'Deploying to the Production environment….'
