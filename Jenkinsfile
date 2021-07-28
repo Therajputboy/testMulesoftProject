@@ -16,10 +16,10 @@ steps {
 stage('Deploy OnPremise') {
 steps {
 script{
-  if(env.GIT_BRANCH == "origin/main")
+  if(env.GIT_BRANCH == "Dev")
   {
     
-    echo 'Deploying mule project due to the latest code commit in Dev branch…'
+    echo 'Deploying mule project due to the latest code commits in Dev branch…'
     echo 'Deploying to the Development environment….'
     bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
   }
@@ -27,13 +27,13 @@ script{
   {
    echo 'Deploying mule project due to the latest code commit in QA branch…'
     echo 'Deploying to the QA environment….'
-    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=QA -Dappname=cicd-test-app1'
+    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
   }
-   else if(env.GIT_BRANCH == "Prod")
+   else if(env.GIT_BRANCH == "main")
   {
   	echo 'Deploying mule project due to the latest code commit in Prod branch…'
     echo 'Deploying to the Production environment….'
-    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Production -Dappname=cicd-test-app1'
+    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
   }
   else
   {
