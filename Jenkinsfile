@@ -55,7 +55,7 @@ post {
      success {
         mail to: 'rohit.singh@apisero.com',
              subject: "Successful Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
+             body: "Build Successful ${env.BUILD_URL}"
     }
 }
 }
