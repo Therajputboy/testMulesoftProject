@@ -21,7 +21,7 @@ script{
     
     echo 'Deploying mule project due to the latest code commits in Dev branch…'
     echo 'Deploying to the Development environment….'
-    bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'
+    /*bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=rohit_tripointe -Danypoint.password=Tslplabap@123 -Dtarget=TPH-MULE-DEV -Dtarget.type=server -Denv=Development -Dappname=cicd-test-app1'*/
   }
   else if(env.GIT_BRANCH == "QA")
   {
@@ -37,7 +37,8 @@ script{
   }
   else
   {
-   echo "Branch not expected"
+   /*echo "Branch not expected."*/
+    echo "New Change"
   }
 }
 
