@@ -9,7 +9,16 @@ steps {
 
  stage('Test') {
       steps {
-          bat "mvn test"
+        script{
+            if(env.GIT_BRANCH == "Dev")
+              {
+                bat "mvn test"
+              }
+          else
+          {
+            echo "Test Skipped"
+          }
+        }
       }
     }
     
