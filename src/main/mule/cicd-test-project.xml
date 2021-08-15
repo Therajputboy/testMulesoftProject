@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
 	<flow name="cicd-test-projectFlow" doc:id="b08137ad-ab5a-4059-9451-c420fa805ea8" >
 		<scheduler doc:name="Scheduler" doc:id="5df34c5b-9d43-4b57-82fd-e9fe1b3cdeb3" >
 			<scheduling-strategy >
 				<fixed-frequency frequency="3000"/>
 			</scheduling-strategy>
 		</scheduler>
-		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub again"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub again -- demo"/>
 		<logger level="INFO" doc:name="Logger" doc:id="dc3697c7-a862-439e-b322-5a9a5031c387" message="Successful"/>
 	</flow>
 </mule>
