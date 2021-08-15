@@ -8,9 +8,9 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="cicd-test-project-test-suite.xml" />
-	<munit:test name="cicd-test-project-test-suite-cicd-test-projectFlowTest" doc:id="58f420e4-9498-4c1f-9120-5614e6fae2d1" description="Test">
+	<munit:test name="cicd-test-project-test-suite-cicd-test-projectFlowTest" doc:id="1ce67d99-d5db-4739-931c-0271841d7f05" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to cicd-test-projectFlow" doc:id="ac5b880a-90fe-4e59-b4e5-8589de50f4e6" name="cicd-test-projectFlow"/>
+			<flow-ref doc:name="Flow-ref to cicd-test-projectFlow" doc:id="87fbda57-82d4-48a8-b344-36e530764f52" name="cicd-test-projectFlow"/>
 		</munit:execution>
 	</munit:test>
 
