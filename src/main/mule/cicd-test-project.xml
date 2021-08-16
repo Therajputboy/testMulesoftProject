@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mul
 				<fixed-frequency/>
 			</scheduling-strategy>
 		</scheduler>
-		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub again -- demo"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a3db3999-849e-43bc-9297-e03af23a192a" message="CICD pipeline creation for deployment to cloudhub again -- demo--"/>
 		<logger level="INFO" doc:name="Logger" doc:id="dc3697c7-a862-439e-b322-5a9a5031c387" message="Successful"/>
 	</flow>
 </mule>
